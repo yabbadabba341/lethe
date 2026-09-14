@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  THE FOUNDRY  |  Copyright (c) 2026 Yannie D. Forest. All rights reserved.
+  NO LICENCE IS GRANTED. See LICENCE.txt. Every distributed copy carries a
+  build marker.
+-->
+<resources>
+    <string name="app_name">The Foundry</string>
+</resources>

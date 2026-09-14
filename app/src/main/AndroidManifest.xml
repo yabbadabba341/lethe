@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  THE FOUNDRY  |  Copyright (c) 2026 Yannie D. Forest. All rights reserved.
+  NO LICENCE IS GRANTED. No copying, adaptation, redistribution, reverse
+  engineering or commercial use without the author's written permission.
+  See LICENCE.txt. Every distributed copy carries a build marker.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- No permissions are declared at all. In particular there is NO INTERNET
+         permission: The Foundry contains no network code, and without this
+         permission Android itself refuses any attempt to reach the network, so
+         the offline promise is enforced by the operating system, not merely by
+         the code. Picking model files uses the system document picker, which
+         needs no storage permission. -->
+
+    <!-- No adaptive icon on purpose. Fire OS masks a launcher icon to a rounded
+         square; a circular seal on a transparent adaptive background leaves the
+         corners to the launcher, which draws them white. The legacy PNG lets the
+         Fire launcher draw the seal as it is. -->
+
+    <application
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

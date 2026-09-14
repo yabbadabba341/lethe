@@ -1,0 +1,43 @@
+/*
+   THE FOUNDRY  |  Copyright (c) 2026 Yannie D. Forest. All rights reserved.
+   NO LICENCE IS GRANTED. No copying, adaptation, redistribution, reverse
+   engineering or commercial use without the author's written permission.
+   See LICENCE.txt. Every distributed copy carries a build marker.
+*/
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.yannieforest.thefoundry'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.yannieforest.thefoundry"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        // Java 8 bytecode, which both the modern and the fallback toolchains
+        // accept without argument.
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // The app page is a plain asset. Left compressed it cannot be memory-mapped
+    // and opens more slowly, so it is stored uncompressed.
+    aaptOptions {
+        noCompress 'html'
+    }
+}
+
+dependencies {
+    implementation 'androidx.webkit:webkit:1.8.0'
+}
