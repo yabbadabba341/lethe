@@ -18,7 +18,7 @@ WHAT IT DOES WHEN SOMETHING GOES WRONG
   so you do not have to download anything to see it. Send me that text and
   the cause can be named exactly.
 --------------------------------------------------------------------------
-name: Build The Foundry APK
+name: APK
 
 # Builds an installable Android APK in the cloud. Nothing is needed on your own
 # computer. When it finishes, the APK is attached to the "latest" Release, which
